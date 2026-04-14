@@ -20,9 +20,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await axios.post('/api/workouts', form);
-
     setForm({ name: '', reps: '', weight: '' });
     fetchWorkouts();
   };
